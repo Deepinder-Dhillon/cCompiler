@@ -4,6 +4,14 @@ A simple extension that helps you build C projects in VS Code. It creates a Make
 
 ---
 
+## Install
+
+Install using this link https://marketplace.visualstudio.com/items?itemName=DeepinderDhillon.cCompiler
+
+or 
+
+Search C-Compile in VS Code Extensions
+
 ## Features
 
 | Feature | What it does |

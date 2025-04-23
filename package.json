@@ -1,9 +1,9 @@
 {
   "name": "cCompiler",
-  "displayName": "c-complier",
-  "description": "Compile C code",
+  "displayName": "C-Compile",
+  "description": "Compile C code and generate Makefile",
   "version": "1.0.0",
-  "publisher": "deepinder-dhillon",
+  "publisher": "DeepinderDhillon",
   "engines": {
     "vscode": "^1.99.0"
   },
