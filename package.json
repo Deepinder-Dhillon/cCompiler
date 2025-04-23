@@ -1,0 +1,64 @@
+{
+  "name": "cCompiler",
+  "displayName": "c-complier",
+  "description": "Compile C code",
+  "version": "1.0.0",
+  "publisher": "deepinder-dhillon",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:cCompiler.compile"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cCompiler.compile",
+        "title": "C: Compile with Makefile"
+      }
+    ],
+    "configuration": {
+      "title": "C Compiler",
+      "properties": {
+        "cCompiler.CC": {
+          "type": "string",
+          "default": "gcc",
+          "description": "C compiler to use (e.g., gcc, clang)"
+        },
+        "cCompiler.CFLAGS": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": ["-Wall", "-g"],
+          "description": "Compiler flags (e.g., -Wall, -g, -O2)"
+        },
+        "cCompiler.LIBS": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Libraries to link (e.g., -lm, -lpthread)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "eslint": "^9.23.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
